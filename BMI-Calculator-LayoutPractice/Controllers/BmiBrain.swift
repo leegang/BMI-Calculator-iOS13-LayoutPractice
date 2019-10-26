@@ -9,18 +9,21 @@
 import Foundation
 import UIKit 
 
-class BmiBrain{
-    var height:Float = 0
-    var weight:Float = 0
-    var bmi:Float = 0
+struct  BmiBrain{
+    
+    var bmi:Float = 0.0
 //    init(height,weight) {
 //        self.height = height
 //        self.weight = weight
 //    }
     
-    func getIbm() -> Float{
+    mutating func caculateBmi(weight:Float,height:Float) {
         bmi = weight / (height * height)
-        return bmi
+    }
+    
+    func getBmi() ->String{
+        let bmiValue = String(format:"%1f",bmi)
+        return bmiValue
     }
     
     func getAdvice() -> String {

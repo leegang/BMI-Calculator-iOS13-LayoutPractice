@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     var height:Float = 1.0
     var weight:Float = 1.0
-    let bmiBrain = BmiBrain()
+    var bmiBrain = BmiBrain()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,10 +29,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func caculatePress(_ sender: UIButton) {
-        
-
-        bmiBrain.weight = weightSlider.value
-        bmiBrain.height = heightSlider.value
+        bmiBrain.caculateBmi(weight: weightSlider.value, height: heightSlider.value)
+   
         
 //        let secondVC = ResultViewController()
         
@@ -45,7 +43,7 @@ class ViewController: UIViewController {
         // Get the new view controller using segue.destination.
         if segue.identifier == "gotoResult"{
             let destaionVC = segue.destination as! ResultViewController
-            destaionVC.bmiValue = bmiBrain.getIbm()
+            destaionVC.bmiValue = bmiBrain.getBmi()
             destaionVC.advieText = bmiBrain.getAdvice()
             destaionVC.backColor = bmiBrain.getColor()
         }

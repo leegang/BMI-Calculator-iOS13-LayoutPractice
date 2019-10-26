@@ -14,7 +14,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var bmiScore: UILabel?
     @IBOutlet weak var bmiAdvice: UILabel!
     
-    var bmiValue:Float = 0.0
+    var bmiValue = ""
     var advieText = ""
     var backColor:UIColor = .red
 
@@ -22,7 +22,7 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        bmiScore?.text = String(format: "%1f", bmiValue)
+        bmiScore?.text =  bmiValue
         bmiAdvice?.text = advieText
         ResultView.backgroundColor = backColor
         
