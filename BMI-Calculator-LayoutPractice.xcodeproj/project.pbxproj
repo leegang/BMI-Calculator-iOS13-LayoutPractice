@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		145AD3A123644759007A7866 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145AD3A023644759007A7866 /* ResultViewController.swift */; };
+		145AD3A323644CD1007A7866 /* BmiBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145AD3A223644CD1007A7866 /* BmiBrain.swift */; };
 		AD0B9F9F230D64B30065EFD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B9F9E230D64B30065EFD9 /* AppDelegate.swift */; };
 		AD0B9FA1230D64B30065EFD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B9FA0230D64B30065EFD9 /* SceneDelegate.swift */; };
 		AD0B9FA3230D64B30065EFD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B9FA2230D64B30065EFD9 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		145AD3A023644759007A7866 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		145AD3A223644CD1007A7866 /* BmiBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BmiBrain.swift; path = "BMI-Calculator-LayoutPractice/Controllers/BmiBrain.swift"; sourceTree = SOURCE_ROOT; };
 		AD0B9F9B230D64B30065EFD9 /* BMI-Calculator-LayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI-Calculator-LayoutPractice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD0B9F9E230D64B30065EFD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD0B9FA0230D64B30065EFD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				AD0B9FA2230D64B30065EFD9 /* ViewController.swift */,
+				145AD3A023644759007A7866 /* ResultViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 		AD0B9FB4230D64F70065EFD9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				145AD3A223644CD1007A7866 /* BmiBrain.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,7 +110,6 @@
 				AD0B9F97230D64B30065EFD9 /* Sources */,
 				AD0B9F98230D64B30065EFD9 /* Frameworks */,
 				AD0B9F99230D64B30065EFD9 /* Resources */,
-				145AD39F2364378E007A7866 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -162,26 +167,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		145AD39F2364378E007A7866 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		AD0B9F97230D64B30065EFD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -190,6 +175,8 @@
 				AD0B9FA3230D64B30065EFD9 /* ViewController.swift in Sources */,
 				AD0B9F9F230D64B30065EFD9 /* AppDelegate.swift in Sources */,
 				AD0B9FA1230D64B30065EFD9 /* SceneDelegate.swift in Sources */,
+				145AD3A323644CD1007A7866 /* BmiBrain.swift in Sources */,
+				145AD3A123644759007A7866 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
