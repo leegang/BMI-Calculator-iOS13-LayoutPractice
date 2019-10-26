@@ -9,11 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var height:Float = 0.0
-    var weight:Float = 0.0
-
+    var height:Float = 1.0
+    var weight:Float = 1.0
+    let bmiBrain = BmiBrain()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
     @IBOutlet weak var heightSlider: UISlider!
@@ -21,23 +22,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var heightLable: UILabel!
     @IBOutlet weak var weightLable: UILabel!
     @IBAction func heightSliderChange(_ sender: UISlider) {
-        height = sender.value
-        heightLable.text = String(format: "%.1fm",height)
+        heightLable.text = String(format: "%.1fm",sender.value)
     }
     @IBAction func weightSliderChange(_ sender: UISlider) {
-        weight = sender.value
-        weightLable.text = String(format: "%.0fKg", weight)
+        weightLable.text = String(format: "%.0fKg", sender.value)
     }
     
     @IBAction func caculatePress(_ sender: UIButton) {
-        let bmi = weight / (height * weight)
-        print(bmi)
+        
+
+        bmiBrain.weight = weightSlider.value
+        bmiBrain.height = heightSlider.value
+        
+//        let secondVC = ResultViewController()
+        
+//        self.present(secondVC, animated: true, completion: nil)
+//        secondVC.bmiScore.text = String(format: "&1f", bmi)
+        self.performSegue(withIdentifier: "gotoResult", sender: nil) //Navigate to the other screen
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        segue.destination = ResultViewController as UIViewController
+    override func prepare(for segue:UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        if segue.identifier == "gotoResult"{
+            let destaionVC = segue.destination as! ResultViewController
+            destaionVC.bmiValue = bmiBrain.getIbm()
+            destaionVC.advieText = bmiBrain.getAdvice()
+            destaionVC.backColor = bmiBrain.getColor()
+        }
         // Pass the selected object to the new view controller.
     }
-    
 }

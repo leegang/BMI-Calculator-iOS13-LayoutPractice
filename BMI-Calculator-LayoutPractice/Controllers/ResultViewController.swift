@@ -11,17 +11,29 @@ import UIKit
 class ResultViewController: UIViewController {
     
     
-    @IBOutlet weak var bmiScore: UILabel!
+    @IBOutlet weak var bmiScore: UILabel?
     @IBOutlet weak var bmiAdvice: UILabel!
     
-    let bmiBrain = BmiBrain()
-    
+    var bmiValue:Float = 0.0
+    var advieText = ""
+    var backColor:UIColor = .red
 
-    override func viewDidLoad() {
+    @IBOutlet var ResultView: UIView!
+    
+    override func viewDidLoad(){
         super.viewDidLoad()
-        bmiScore.text = String(format: "%1f", bmiBrain.bmiValue)
+        bmiScore?.text = String(format: "%1f", bmiValue)
+        bmiAdvice?.text = advieText
+        ResultView.backgroundColor = backColor
+        
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func dissButtonPress(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 

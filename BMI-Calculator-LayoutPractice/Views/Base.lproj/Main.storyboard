@@ -110,7 +110,7 @@
                         <outlet property="heightSlider" destination="QqB-i1-KxK" id="o0p-QO-Svk"/>
                         <outlet property="weightLable" destination="YIh-Wr-wDN" id="0Nw-W4-T1G"/>
                         <outlet property="weightSlider" destination="JIH-Nr-5Rb" id="Yje-2W-8k0"/>
-                        <segue destination="kfb-Mg-Tzx" kind="presentation" id="1cU-uC-hok"/>
+                        <segue destination="kfb-Mg-Tzx" kind="presentation" identifier="gotoResult" id="1cU-uC-hok"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -153,7 +153,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-cv-4yW">
-                                <rect key="frame" x="20" y="811" width="374" height="51"/>
+                                <rect key="frame" x="20" y="776" width="374" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -166,12 +166,16 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dissButtonPress:" destination="kfb-Mg-Tzx" eventType="touchUpInside" id="GnN-Ld-ArW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.19980379940000001" green="0.48169642689999997" blue="0.77313679459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="uhj-wm-fzz"/>
                     </view>
                     <connections>
+                        <outlet property="ResultView" destination="HHh-MX-RY3" id="L65-4b-fZk"/>
                         <outlet property="bmiAdvice" destination="wL7-Mk-scd" id="KdK-wx-jF5"/>
                         <outlet property="bmiScore" destination="hWo-gc-8p7" id="Mdb-aG-uU0"/>
                     </connections>
